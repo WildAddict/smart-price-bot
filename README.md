@@ -1,33 +1,38 @@
-# SmartPrice | Асинхронный Telegram-бот для сравнения цен
+# SmartPrice | Asynchronous Telegram Bot for Price Comparison
 
-Асинхронный Telegram-бот, разработанный на фреймворке **aiogram 3**. Бот позволяет пользователям находить и сравнивать цены на товары в режиме реального времени из нескольких независимых источников.
+An asynchronous Telegram bot built with **aiogram 3**. The bot allows users to find and compare product prices in real time across multiple independent sources.
 
-## 🚀 Функционал
-* **Параллельный опрос источников:** Использует асинхронность для одновременного сбора данных из разных модулей.
-* **Реальный парсинг:** В проект интегрирован живой парсер интернет-магазина на базе библиотеки `BeautifulSoup4`.
-* **Умная сортировка:** Бот автоматически сравнивает предложения и выводит пользователю самый выгодный вариант с прямой ссылкой на покупку.
-* **Безопасность данных:** Конфиденциальные данные и токены скрыты в переменных окружения.
+## 🚀 Features
 
-## 🛠 Стек технологий
-* **Язык:** Python 3.11+
-* **Фреймворк бота:** `aiogram` (v3)
-* **Асинхронные HTTP-запросы:** `aiohttp`
-* **Парсинг данных:** `beautifulsoup4`
-* **Менеджмент конфигурации:** `python-dotenv`
+* **Parallel source polling:** Uses asynchronous processing to collect data from multiple modules simultaneously.
+* **Live web scraping:** Includes a working online store parser built with the `BeautifulSoup4` library.
+* **Smart sorting:** Automatically compares offers and shows users the best available option, with a direct link to the product.
+* **Secure configuration:** Sensitive data and API tokens are stored in environment variables.
 
-## 📦 Архитектура проекта
-* `bot.py` — главный исполняемый файл бота, диспетчер и хендлеры.
-* `parsers/` — пакет с изолированными модулями парсеров.
-  * `__init__.py` — маркер пакета Python.
-  * `source_a.py` — модуль реального парсинга HTML-страниц каталога.
-  * `source_b.py` — тестовый модуль (Mock) для симуляции ценообразования.
-* `.env` — файл конфигурации и токенов (не публикуется в репозитории).
-* `requirements.txt` — список зависимостей проекта.
+## 🛠 Tech Stack
 
-## 🔧 Локальный запуск
+* **Language:** Python 3.11+
+* **Bot framework:** `aiogram` (v3)
+* **Asynchronous HTTP requests:** `aiohttp`
+* **Web scraping:** `beautifulsoup4`
+* **Configuration management:** `python-dotenv`
 
-1. Клонируйте репозиторий.
-2. Создайте и активируйте виртуальное окружение `venv`.
-3. Установите зависимости:
+## 📦 Project Structure
+
+* `bot.py` — the main entry point, containing the bot dispatcher and handlers.
+* `parsers/` — a package containing separate parser modules.
+  * `__init__.py` — Python package marker.
+  * `source_a.py` — module for parsing live HTML pages from a product catalog.
+  * `source_b.py` — mock module used to simulate product pricing.
+* `.env` — configuration file containing tokens and other environment variables (not included in the repository).
+* `requirements.txt` — list of project dependencies.
+
+## 🔧 Local Setup
+
+1. Clone the repository.
+2. Create and activate a virtual environment named `venv`.
+3. Install the dependencies:
+
    ```bash
    pip install -r requirements.txt
+   ```
